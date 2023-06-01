@@ -3,7 +3,7 @@ BANNER
 ======================================-->
 <?php
         $banner = ControladorBanner::ctrMostrarBanner();
-        $servidor = ControladorRuta::ctrServidor();
+        $servidor = ControladorRuta::ctrRuta();
     //    echo '<pre class="bg-white">'; print_r($banner); echo "</pre>";
  ?>
 
@@ -18,8 +18,8 @@ BANNER
                 
                 <?php foreach ($banner as $key => $value): ?>
 
-                 <li>                   
-                    <img src="<?php echo $servidor.$value["img"];?>" width="100%">
+                <li>                   
+                    <img src="<?php echo $value["img"];?>" width="100%">
                 </li>
 
                 <?php endforeach ?>

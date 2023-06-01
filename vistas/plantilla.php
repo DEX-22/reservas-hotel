@@ -97,25 +97,23 @@ include "paginas/modulos/header.php";
 PÁGINAS
 =============================================*/
 
-if(isset($_GET["pagina"])){
+$pages = [
+	"habitaciones" => "paginas/habitaciones.php",
+	"reservas" => "paginas/reservas.php",
+	"perfil" => "paginas/perfil.php"
+];
 
-	if($_GET["pagina"] == "habitaciones"){
 
-		include "paginas/habitaciones.php";
+$page = $_GET["pagina"];
+
+if(isset($page)){
+
+	if(in_array($page,$pages)){
+
+		include $pages[$page];
 
 	}
-
-	if($_GET["pagina"] == "reservas"){
-
-		include "paginas/reservas.php";
-		
-	}
-
-	if($_GET["pagina"] == "perfil"){
-
-		include "paginas/perfil.php";
-		
-	}
+	//incluir else "PAGE NOT FOUND"
 
 }else{
 

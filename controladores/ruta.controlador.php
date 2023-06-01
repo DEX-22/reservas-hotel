@@ -4,11 +4,11 @@ class ControladorRuta{
 
 	static public function ctrRuta(){
 
-		return "http://localhost/reservas-hotel/";
+		return "http://localhost:8000/reservas-hotel/";
 
 	}
 	static public function ctrServidor(){
-		return "http://localhost/reservas-hotel/backend/";
+		return "http://localhost:8000/reservas-hotel/backend/";
 	}
 
 }
