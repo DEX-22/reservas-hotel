@@ -3,7 +3,7 @@ BANNER
 ======================================-->
 <?php
         $banner = ControladorBanner::ctrMostrarBanner();
-        $servidor = ControladorRuta::ctrRuta();
+        $servidor = ControladorRuta::ctrServidor();
     //    echo '<pre class="bg-white">'; print_r($banner); echo "</pre>";
  ?>
 

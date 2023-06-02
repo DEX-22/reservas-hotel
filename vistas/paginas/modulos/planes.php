@@ -29,7 +29,7 @@ PLANES
 
 				</figure>
 
-				<img src="<?php echo $servidor.$value['img']; ?>" class="img-fluid" width="100%">
+				<img src="<?php echo $value['img']; ?>" class="img-fluid" width="100%">
 
 
 			</div>
