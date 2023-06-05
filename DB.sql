@@ -15,24 +15,26 @@ CREATE TABLE planes (
     fecha DATE
 );
 
+CREATE TABLE recorrido (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    foto_peq VARCHAR(255),
+    foto_grande VARCHAR(255),
+    titulo VARCHAR(255),
+    descripcion VARCHAR(255),
+    fecha DATETIME
+);
+
+
+
 INSERT into banner(img) values ("img/banner/banner01.jpg"),
                                 ("img/banner/banner02.jpg"),
                                 ("img/banner/banner03.jpg"),
                                 ("img/banner/banner04.jpg");
 
 
--- INSERT into planes(img) values ("img/luna-de-miel.png"),
---                                 ("img/plan-aventura.png"),
---                                 ("img/plan-romantico.png"),
---                                 ("img/plan-spa.png");
+INSERT INTO planes(id, tipo, img, descripcion, precio_alta, precio_baja, fecha) VALUES 
 
-
-
-
-INSERT INTO planes 
-(id, tips, img, descripcion, precio_alta, precio_baja, fecha) VALUES 
-
-(NULL, "Romantico","img/plan-remantico.png", "Ven y celebra con nosotros una fecha especial como aniversaric de bodas,novics o una pedida de mano.\r\n.
+(NULL, "Romantico","img/plan-romantico.png", "Ven y celebra con nosotros una fecha especial como aniversaric de bodas,novics o una pedida de mano.\r\n.
 1 paguete incluye lo siguiente:\r\n-1 de Noche de Alojamiento en Hab. Matrimonial\r\n- Botells de Espumante\rin- Piqueo de Quesos ( 3 tipos)\rin-
 Dezayunc buffet\r\n- Check in 3.88 pm\r\n-Free late check out hasts laz 3.88 pm\rin- Uzo del gimnazio y pizcina®\r\n- Estacicnamiento de
 cortezia\r\nPrecio No incluye 18% de zervicioz y/o 18% de IGV", 484.00, 368.00, current_timestamp()), 
@@ -49,4 +51,6 @@ MUCHAS COSAS MAS. ., permitiends experimentar una fuzidn de nervios, miedos y za
 integral an medic de un parque de 2 hectireas con inmedorables vizuales en donde el relax, =l cuidado estético y la actividad fizica complementan
 su estadia en nuestro Apart Hotel.", 250.00, 230.00, current_timestamp());
 
-
+INSERT INTO recorrido(foto_peq,foto_grande,titulo,descripcion,fecha) VALUES ("vistas/img/recorrido/pueblo01a.png","vistas/img/recorrido/pueblo01b.png","La Piedra del Peñol", "La Piedra del Peñol es una roca de granito gigante que se encuentra al sudoeste de la localidad y que dispone de una larga escalera hasta su cima, en la que se puede disfrutar de una vista panorámica de la zona.",current_timestamp() ),
+                                                                            ("vistas/img/recorrido/pueblo02a.png","vistas/img/recorrido/pueblo02b.png","La Piedra del Peñol", "La Piedra del Peñol es una roca de granito gigante que se encuentra al sudoeste de la localidad y que dispone de una larga escalera hasta su cima, en la que se puede disfrutar de una vista panorámica de la zona.",current_timestamp() ),
+                                                                            ("vistas/img/recorrido/pueblo03a.png","vistas/img/recorrido/pueblo03b.png","La Piedra del Peñol", "La Piedra del Peñol es una roca de granito gigante que se encuentra al sudoeste de la localidad y que dispone de una larga escalera hasta su cima, en la que se puede disfrutar de una vista panorámica de la zona.",current_timestamp() );
